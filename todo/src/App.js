@@ -20,9 +20,9 @@ function App() {
             key={idx}
             onClick={() => handleToggle(idx)}
             style={{
-                width: "50%",
+                width: "25%",
                 margin: "0 auto",
-                border: "1px solid black",
+                border: "1px solid orangered",
                 marginTop: "2%",
             }}
             >

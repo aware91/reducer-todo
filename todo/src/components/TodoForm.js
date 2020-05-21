@@ -16,41 +16,19 @@ const TodoForm = ({ dispatch }) => {
         dispatch({ type: "CLEAR-COMPLETE" });
     };
 
-    const handleTagSubmit = (e) => {
-        e.preventDefault();
-        setTags([...tags, curTag]);
-        setCurTag("");
-    };
-
-    const removeTag = (tag) => {
-        let newTags = tags.filter((t) => {
-        return t !== tag;
-        });
-        setTags(newTags);
-    };
-
     return (
         <div>
-        <button onClick={handleClear}>Clear Completed</button>
         <form onSubmit={handleSubmit}>
             <input
             type="text"
-            placeholder="Title..."
+            placeholder="Add Todo Item"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
             />
             <button type="submit">Submit Todo</button>
-        </form>
-        <form onSubmit={handleTagSubmit}>
-            <input
-            type="text"
-            placeholder="Add a tag"
-            value={curTag}
-            onChange={(e) => setCurTag(e.target.value)}
-            required
-            />
-        </form>
+        </form>        
+        <button onClick={handleClear}>Clear Completed</button>
         </div>
     );
 };
