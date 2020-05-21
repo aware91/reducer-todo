@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0 36px;
+  max-width: 665px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  text-align: left;
+}
+
+.shopping-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+.todo {
+  background-color: orange;
+  width: 100%;
+  text-align: left;
+  margin: 4px 0;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.todo.done {
+  background-color: orangered;
+  text-decoration: line-through;
+}
+form {
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+}
+form > input {
+  background-color: #2d2d37;
+  border: 0;
+  padding: 6px 0;
+  font-size: 1rem;
+  width: 75%;
+  outline: 0;
+  color: white;
+  border-bottom: 1px solid orange;
+  margin-right: 8px;
+}
+
+button {
+  background-color: orangered;
+  border: 1px solid orangered;
+  color: white;
+  font-size: 16px;
+  padding: 6px 14px;
+}
+
+.add {
+    background-color: orangered;
+    border: 2px solid orange;
+    border-radius: 10px;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    padding: 6px 14px;
+}
+
+input::placeholder {
+  color: orangered;
+  opacity: 1;
+}
+
+.clear-btn {
+  margin-top: 16px;
+}
